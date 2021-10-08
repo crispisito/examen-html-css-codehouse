@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+/*** Estilos generales ***/
+.wrapper {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+/*** Estilos HEADER ***/
+.header {
+    background-color: #f9f9f9;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+}
+.header__logo {
+    width: 5.5rem;
+}
+.header__logo .logo {
+    width: 100%;
+}
+.header__nav {
+    display: flex;
+    padding-left: 1.25rem;
+}
+.header__nav .nav-list {
+    display: flex;
+    align-items: center;
+}
+.header__nav .nav-list .nav-item {
+    margin-left: 2.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+}
+.header__nav .nav-list .nav-item:hover {
+    color: #f3b036;
+    border-bottom: 1px solid #f3b036;
+}
+.header__nav .menu-movil {
+    display: none;
+}
+
+/*** Estilos MAIN ***/
+
+/** HEAD **/
+.head {
+    height: 42rem;
+    background: url(images/cabecera.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.head__container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+}
+.head__container .head__title {
+    width: 28rem;
+    font-size: 2.5rem;
+    line-height: 5.5rem;
+    font-weight:600;
+    color: white;
+}
+.head__container .head__title span {
+    font-family: 'Ephesis', cursive;
+    font-size: 6.5rem;
+    margin-right: .6rem;
+}
+
+/** ARTICLES **/
+.article {
+    margin-bottom: 4rem;
+}
+.article__container {
+    padding: 4rem 2.5rem 0;
+    
+}
+.article__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+}
+.article__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+.article__item {
+    padding: 2.5rem;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    transition: all .5s;
+}
+.article__item:hover {
+    box-shadow: 0 0 19px -2px #f3b03685;
+    transform: scale(1.03);
+}
+.article__item .img {
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+.article__item .title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+.article__item .info {
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/** BANNER **/
+.banner__container {
+    display: flex;
+    height: 30rem;
+    background-color: #f9f9f9;
+}
+.banner__img {
+    width: 50%;
+    background: url(images/half-section.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner__info {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2.5rem 2rem 4rem;
+}
+.banner__info .title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+/*** Estilos FOOTER ***/
+.footer {
+    background-color: #e7f8ff;
+}
+.footer__container {
+    padding: 2.5rem;
+}
+.footer__container p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 970px) {
+    /* HEADER */
+    .header__container{
+        padding: 1.25rem;
+    }
+    .header__logo {
+        width: 4rem;
+    }
+    .header__nav .nav-list {
+        display: none;
+    }
+    .header__nav .menu-movil {
+        display: flex;
+        width: 2rem;
+    }
+
+    /* HEAD */
+    .head {
+        height: 30rem;
+    }
+    .head__container{
+        padding: 2.5rem 1.25rem;
+    }
+    .head__container .head__title {
+        line-height: 4.4rem;
+    }
+
+    /* ARTICLES */
+    .article__container {
+        padding: 4rem 1.25rem 0;
+    }
+    .article__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article__item {
+        max-width: 30rem;
+        margin-bottom: 2rem;
+    }
+
+    /* BANNER */
+    .banner__container{
+        flex-direction: column;
+        height: auto;
+    }
+    .banner__img {
+        height: 15rem;
+        width: 100%;
+    }
+    .banner__info {
+        width: 100%;
+        padding: 3.5rem 1.25rem;
+    }
+    .banner__info  .text {
+        text-align: center;
+    }
+}
